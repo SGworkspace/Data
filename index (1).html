@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Entry System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-graduation-cap"></i> Student Data Entry</h1>
+            <button id="dashboardBtn" class="btn-secondary">
+                <i class="fas fa-chart-bar"></i> Dashboard
+            </button>
+        </header>
+
+        <form id="studentForm" class="form-card">
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Age</label>
+                    <input type="number" id="age" min="5" max="25" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-venus-mars"></i> Gender</label>
+                    <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-school"></i> Class</label>
+                    <input type="text" id="class" placeholder="e.g., 10th A" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-id-card"></i> Roll No</label>
+                    <input type="text" id="rollNo" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-phone"></i> Phone</label>
+                <input type="tel" id="phone">
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-save"></i> Save Student Data
+            </button>
+        </form>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
